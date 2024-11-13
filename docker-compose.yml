@@ -1,0 +1,38 @@
+version: "3"
+
+services:
+  frontend:
+    build: ./student-list
+    container_name: react-ui
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    tty: true
+    depends_on:
+      - backend
+    networks:
+      - mern-network
+  
+  backend:
+    build: ./nodejs-crud-student/nodejs-crud-student
+    container_name: node-api
+    ports:
+      - "5000:5000"
+    depends_on:
+      - database
+    networks:
+      - mern-network
+  
+  database:
+    image: mongo
+    container_name: mongo-db
+    ports:
+      - "27017:27017"
+    volumes:
+      - home/vietanh/mongo-backup:/data/db
+    networks:
+      - mern-network
+
+  networks:
+    mern-networks:
+      driver: bridge
