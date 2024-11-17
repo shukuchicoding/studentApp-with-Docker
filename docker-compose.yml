@@ -30,10 +30,10 @@ services:
     ports:
       - "27017:27017"
     volumes:
-      - home/vietanh/mongo-backup:/data/db
+      - /home/vietanh/mongo-backup:/data/db
     networks:
       - mern-network
 
-  networks:
-    mern-network:
-      driver: bridge
+networks:
+  mern-network:
+    driver: bridge
