@@ -26,6 +26,7 @@ services:
   database:
     image: mongo
     container_name: mongo-db
+    restart: always
     ports:
       - "27017:27017"
     volumes:
@@ -34,5 +35,5 @@ services:
       - mern-network
 
   networks:
-    mern-networks:
+    mern-network:
       driver: bridge
