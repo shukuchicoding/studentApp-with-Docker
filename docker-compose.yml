@@ -24,7 +24,7 @@ services:
       - mern-network
   
   database:
-    image: mongo
+    image: mongo:5.0
     container_name: mongo-db
     restart: always
     ports:
