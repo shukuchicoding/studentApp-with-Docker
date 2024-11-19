@@ -28,7 +28,8 @@ services:
     ports:
       - "27017:27017"
     volumes:
-      - /home/vietanh/mongo-backup:/data/db
+      - /home/ubuntu/mongo-backup:/data/db
+      - ./mongo-init:/docker-entrypoint-initdb.d/
     networks:
       - mern-network
 

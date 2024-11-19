@@ -1,0 +1,52 @@
+[{
+  "_id": {
+    "$oid": "670f29130727cf7eb199fe62"
+  },
+  "StudentId": 20215586,
+  "Name": "Phạm Lưu Minh Hùng",
+  "Roll": 1,
+  "Birthday": {
+    "$date": "2003-07-19T00:00:00.000Z"
+  },
+  "__v": 0,
+  "Address": "Bình Phước"
+},
+{
+  "_id": {
+    "$oid": "670f2a400727cf7eb199fe66"
+  },
+  "StudentId": 20210037,
+  "Name": "Lê Minh Việt Tuấn",
+  "Roll": 2,
+  "Birthday": {
+    "$date": "2003-04-14T00:00:00.000Z"
+  },
+  "__v": 0,
+  "Address": "Vĩnh Phúc"
+},
+{
+  "_id": {
+    "$oid": "67179eca27def8fea10c4cbe"
+  },
+  "StudentId": 20215643,
+  "Name": "Vũ Văn Thăng",
+  "Roll": 3,
+  "Birthday": {
+    "$date": "2002-11-04T00:00:00.000Z"
+  },
+  "Address": "Bắc Giang",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "673cc29a4b2996012f586937"
+  },
+  "StudentId": 20210039,
+  "Name": "Phạm Khánh Hưng",
+  "Roll": 4,
+  "Birthday": {
+    "$date": "2003-12-08T00:00:00.000Z"
+  },
+  "Address": "Thái Bình",
+  "__v": 0
+}]
