@@ -38,7 +38,7 @@ const sortedRows = (rows, comparator) => {
 
 const StudentTable = ({ students, onEdit, onDelete }) => {
     const [order, setOrder] = useState('asc'); // Trạng thái thứ tự sắp xếp
-    const [orderBy, setOrderBy] = useState('StudentID'); // Trạng thái cột được sắp xếp
+    const [orderBy, setOrderBy] = useState('StudentId'); // Trạng thái cột được sắp xếp
     const [page, setPage] = useState(0);
     const [rowsPerPage, setRowsPerPage] = useState(5);
 
@@ -71,11 +71,11 @@ const StudentTable = ({ students, onEdit, onDelete }) => {
                             {/* Sử dụng TableSortLabel để tạo cột có thể sắp xếp */}
                             <TableCell>
                                 <TableSortLabel
-                                    active={orderBy === 'StudentID'}
-                                    direction={orderBy === 'StudentID' ? order : 'asc'}
-                                    onClick={() => handleRequestSort('StudentID')}
+                                    active={orderBy === 'StudentId'}
+                                    direction={orderBy === 'StudentId' ? order : 'asc'}
+                                    onClick={() => handleRequestSort('StudentId')}
                                 >
-                                    Student ID
+                                    Student Id
                                 </TableSortLabel>
                             </TableCell>
                             <TableCell>
@@ -118,7 +118,7 @@ const StudentTable = ({ students, onEdit, onDelete }) => {
                             </TableRow>
                         ) : paginatedStudents.map((student) => (
                             <StudentRow
-                                key={student.StudentID}
+                                key={student.StudentId}
                                 student={student}
                                 onEdit={onEdit}
                                 onDelete={onDelete}
