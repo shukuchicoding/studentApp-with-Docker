@@ -55,7 +55,7 @@ exports.deleteStudent = async (req, res) =>{
 exports.searchStudents = async (req, res) => {
     try {
         const { query } = req.query;
-        // Tìm sinh viên theo StudentID hoặc Name (không phân biệt hoa thường)
+        // Tìm sinh viên theo StudentId hoặc Name (không phân biệt hoa thường)
         const searchConditions = [];
         if (!isNaN(query) && query.trim() !== "") {
             searchConditions.push({ "StudentId": Number(query) });

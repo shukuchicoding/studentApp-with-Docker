@@ -75,7 +75,7 @@ const StudentTable = ({ students, onEdit, onDelete }) => {
                                     direction={orderBy === 'StudentId' ? order : 'asc'}
                                     onClick={() => handleRequestSort('StudentId')}
                                 >
-                                    Student Id
+                                    Student ID
                                 </TableSortLabel>
                             </TableCell>
                             <TableCell>

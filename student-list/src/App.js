@@ -13,7 +13,7 @@ function App() {
   const [openEditDialog, setOpenEditDialog] = useState(false);
   const [editingStudent, setEditingStudent] = useState([]);
   const [openConfirmDialog, setOpenConfirmDialog] = useState(false);
-  const [selectedStudentID, setSelectedStudentID] = useState(null);
+  const [selectedStudentId, setSelectedStudentId] = useState(null);
   const [searchResults, setSearchResults] = useState([]);
 
   useEffect(() => {
@@ -32,14 +32,14 @@ function App() {
   };
 
   const handleDeleteStudent = async () => {
-    await deleteStudent(selectedStudentID);
+    await deleteStudent(selectedStudentId);
     const updatedStudents = await getStudents();
     setStudents(updatedStudents.data);
     setOpenConfirmDialog(false);
   };
 
   const openConfirmDeleteDialog = (id) => {
-    setSelectedStudentID(id); // Lưu lại ID sinh viên cần xóa
+    setSelectedStudentId(id); // Lưu lại ID sinh viên cần xóa
     setOpenConfirmDialog(true); // Mở hộp thoại xác nhận
   };
 
