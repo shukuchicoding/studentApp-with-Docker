@@ -1,15 +1,9 @@
 const express = require("express");
 require('dotenv').config();
 const app = express();
-const cors = require('cors');
 
 //middleware
 app.use(express.json());
-app.use(cors({
-    origin: process.env.FE_URL,
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],  // Specify allowed methods
-    credentials: true  // If you want to allow cookies or authentication headers
-}));
 
 const studentRouter = require("./routes/StudentRoutes");
 app.use("/", studentRouter);
