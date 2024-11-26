@@ -14,7 +14,7 @@ RUN npm install --production && npm cache clean --force
 COPY . .
 
 # Build the application (nếu cần, bỏ qua nếu không cần build)
-RUN npm run build
+# RUN npm run build
 
 # Stage 2: Runtime stage
 FROM node:18-alpine
