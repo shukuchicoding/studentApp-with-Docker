@@ -2,8 +2,8 @@ import axios from 'axios';
 
 const axiosInstance = axios.create({
     // baseURL: 'http://node-api:5000',
-    baseURL: 'http://54.169.254.63:5000',
-
+    // baseURL: 'http://54.169.254.63:5000',
+    baseURL: 'https://api.lmvait2k66.id.vn',
 });
 
 export const getStudents = async () => {
