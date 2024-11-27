@@ -7,7 +7,7 @@ const cors = require('cors');
 app.use(express.json());
 
 app.use(cors({
-    origin: '*',
+    origin: 'https://lmvait2k66.id.vn',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],  // Specify allowed methods
     credentials: true  // If you want to allow cookies or authentication headers
 }));
