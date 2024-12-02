@@ -6,6 +6,9 @@ exports.getAllStudents = async() => {
 };
 
 exports.createStudent = async(student) => {
+    const {StudentId, Name, Roll, Birthday, Address} = student;
+    if (!StudentId || !Name || !Roll || !Birthday || !Address)
+        throw new Error('All fields must be filled!');
     return await StudentModel.create(student);
 };
 
