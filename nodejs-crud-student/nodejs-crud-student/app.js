@@ -5,7 +5,7 @@ const cors = require('cors');
 
 //middleware
 app.use(express.json());
-
+app.use(helmet());
 app.use(cors({
     // origin: 'https://lmvait2k66.id.vn',
     origin: '*',
